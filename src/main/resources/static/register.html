@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="author" content="Chara Gergi">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<title> Register </title>
+	</head>
+
+	<body>
+		<div id="register" class="modal">
+ 		<span onclick="redirect()" class="close" >&times;</span>
+
+ 		<!--Start of Register Form -->
+  		<form  action="POST" target="/registration" name="registrationForm" id="registrationForm" class="modal-content">
+   			<div class="container">
+	  			<h1>Register</h1>
+	  			<p>Please fill in this form to create an account.</p>
+
+				<label for="reg-email"><b>Email</b></label>
+				<input type="text" placeholder="Enter Email" name="email" id="reg-email" required>
+				<label for="reg-psw"><b>Password</b></label>
+				<input type="password" placeholder="Enter Password" name="psw" id="reg-psw" required>
+				<label for="psw-repeat"><b>Repeat Password</b></label>
+				<input type="password" placeholder="Repeat Password" name="psw-repeat" id="psw-repeat" required>
+
+		      	<div class="clearfix">
+					  <button type="button" onclick="redirect()" class="cancelbtn">Cancel</button>
+					  <button form="registrationForm" type="submit" class="signupbtn">Sign Up</button>
+		      	</div>
+		     </div>
+		</form>
+		</div>
+		<!--End of Register Form -->
+
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+	<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="script.js"></script>
+	</body>
+</html>

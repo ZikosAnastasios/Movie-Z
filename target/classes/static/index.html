@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="author" content="Chara Gergi, Anastasios Zikos">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<title> Home Page </title>
+	</head>
+
+	<body id="back_img">
+		<div class="grid-container">
+
+			<!--Start of header -->
+			<div class="header">
+				<p> Movie-z </p>
+				<p class="aside">  
+				 <a href="login.html" class="bold"> Login |</a>
+				 <a href="register.html" class="bold"> Register |</a>  
+				 <span class="bold" id="logout" onclick="logout()"> Logout</span>
+				 </p>
+			</div>
+			<!--End of header -->
+
+			<!--Start of Navigation Bar -->
+			<div class="nav-bar">
+			
+				<div> <a href="index.html" class="current"> HOME PAGE </a></div> 
+				<div> <a href="bookmarks.html">  BOOKMARKS </a></div>
+			
+			</div>
+			<!--End of Navigation Bar -->
+
+			<!--Start of Main content -->
+			<div class="main">
+				<form id="searchForm">
+					<input type="text" class="form-control" id="searchText" placeholder="Search...">
+				</form>
+			</div>
+			<!--End of Main content -->
+-
+			<div class="results">
+				<div class="containerResults" id="movies">
+				</div>
+			</div>
+			<footer>
+				 &copy; Copyrights Moviez.
+			</footer>	
+		</div>
+
+		<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+		<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script src="script.js"></script>
+
+	</body>	
+
+
+</html>

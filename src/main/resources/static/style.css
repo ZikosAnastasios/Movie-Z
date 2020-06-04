@@ -1,0 +1,256 @@
+/*
+ *
+ * General body characteristics and web-site's layout
+ * 
+ */
+
+body{
+	color: #d2feff;
+	font-family: sans-serif; /*Content's font*/
+}
+
+/*"Custom" font for the title*/
+@font-face{
+  font-family: my;
+  src: url(fonts/Bavro-Regular.ttf);
+}
+
+/* Set image as background */
+#back_img{
+	background-image: url(pics/back.png); /*Background Image*/
+	background-size: cover;          
+  background-repeat: no-repeat;
+  background-position: center center; 
+}	
+
+/*Main Lay-out of the website*/
+.grid-container{
+	display: grid;
+	grid-template-columns:  1fr 3fr;
+	grid-template-rows:  0.3fr 1fr 4fr 0.3fr;
+	grid-template-areas: 
+		"header header"
+		"nav-bar main"
+    "results results"
+		"footer footer";
+}
+
+/* Title's style*/
+.header{
+	grid-area: header;
+	text-align: center;
+	font-family : my;
+	font-size:  2rem;
+}
+
+/*Navigation Bar*/
+.nav-bar{
+	grid-area: nav-bar;
+	float:left;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+}
+
+/*Main Content */
+.main{
+	grid-area: main;
+	display: flex;
+	text-align: center;
+	justify-content: space-around;
+	align-items: center;
+	margin-top: -2.5rem;
+}
+
+.results{
+  grid-area: results;
+}
+
+/*Footer's Style*/
+footer{
+	grid-area: footer;
+	text-align: center;
+	margin-top: 6.5rem;
+}
+
+/* Align items to the right*/
+.aside{
+	font-size: 0.9rem;
+	float: right;
+	margin-top: -5.5rem;
+	margin-left: 2rem;
+}
+
+/*Search Bar style*/
+#searchForm{
+  width: 50%;
+  height: 25px;
+  border: 2px;
+  font-size: 1rem;
+}
+
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+/*Make the links white with no underline-style*/
+a{
+  text-decoration: none;
+  color:#d2feff;
+}
+
+a:hover{
+  font-size: 1.1rem;
+}
+
+/* Make yellow the link user is at the moment*/
+.current{
+  color: #ffc500;
+}
+
+/* Make the hovered items bold and underline and make the cursor a pointer*/
+.bold:hover{
+  font-weight: bold;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+
+/*
+ *
+ * Display the results in a flex container
+ *
+ */
+
+.containerResults{
+  display: flex;
+  flex-flow: row wrap; 
+  align-items: center;
+  justify-content: space-between;
+}
+
+.containerResults img{
+  width: 200px;
+  height:300px;
+}
+
+.containerResults div{
+  flex: 0 0 400px;
+  height: 38rem;
+  align-self: center;
+  }
+
+.containerResults div button{
+ width: 8rem;
+}
+
+ul{
+  background-color: #4d036b;
+  border-radius: 7px;
+}
+
+/*
+ *
+ * Style rules for the form-pages (register and login page)
+ *
+ */
+.container{
+	padding: 2.2rem;
+}
+
+.modal {
+  position: fixed; 
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%; 
+  overflow: auto;
+  background-color: #474e5d;
+  color: #4d036b;
+  padding-top: 50px;
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width:50%; /* Could be more or less, depending on screen size */
+}
+
+.close {
+  position: absolute;
+  right: 35px;
+  top: 15px;
+  font-size: 40px;
+  font-weight: bold;
+  color: #f1f1f1;
+}
+
+.close:hover,
+.close:focus {
+  color: #f44336;
+  cursor: pointer;
+}
+
+/* Clear floats */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+/* Add a background color when the inputs get focus */
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for all buttons */
+button {
+  background-color: #4d036b;
+  color:#d2feff;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+button:hover {
+  opacity:1;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  padding: 14px 20px;
+  background-color:#ffc500;
+}
+
+/* Float cancel and signup buttons and add an equal width */
+.cancelbtn, .signupbtn {
+  float: left;
+  width: 50%;
+}
+
+/* Set the signin button at the center*/
+.signinbtn{
+	width: 50%;
+	float: none;
+	margin-left: 25%
+}
+
+
+
