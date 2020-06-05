@@ -8,12 +8,12 @@
 		<title> Bookmarks </title>
 	</head>
 
-	<body style="background-color: #263885">
+	<body>
 
 		<div class="grid-container">
 
 				<!--Start of header -->
-			<div class="header">
+			<div class="header" style="background-color: #4d036b">
 				<p> Movie-z </p>
 				<p class="aside">  
 				 <a href="login.html" class="bold"> Login |</a>
@@ -26,17 +26,19 @@
 			<div class="nav-bar" style="margin-top: -3rem;">
 			
 				<div> <a href="index.html"> HOME PAGE </a></div> 
-				<div> <a href="bookmarks.html" class="current">  BOOKMARKS </a></div>
+				<div > <a href="bookmarks.html" class="current">  BOOKMARKS </a></div>
 			
 			</div>
 			<!-- End of Navigation Bar -->
 
-			<!-- Start of main -->
-			<div class="main">
+			<div class="main"></div>
+
+			<!-- Start of bookmarks -->
+			<div class="results">
 				<div class="containerResults" id="movies">
 				</div>
 			</div>
-			<!-- End of main -->
+			<!-- End of bookmarks -->
 
 			<footer>
 				&copy; Copyrights Moviez.
@@ -48,14 +50,9 @@
 				src="https://code.jquery.com/jquery-3.1.1.min.js"
 				integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
 				crossorigin="anonymous"></script>
-		<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 		<script src="script.js"></script>
-
-
-		<script>
-			getMovie();
-		</script>
+		<script> getBookmarks() </script>
 
 	</body>
 </html>

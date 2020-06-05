@@ -1,22 +1,18 @@
 package com.example.MovieProject.movie;
 
 import com.example.MovieProject.user.User;
-
-import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.ManyToMany;
 import java.util.List;
 
-
 @Entity
 public class Movie{
-
 
     @Id
     private String movieId;
 
-    @ManyToMany(cascade = CascadeType.REMOVE)
+    @ManyToMany
     List <User> users;
 
     //Empty constructor
